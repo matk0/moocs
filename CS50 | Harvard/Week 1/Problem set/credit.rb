@@ -13,7 +13,7 @@ case cc_number[0..1]
     puts "AMEX"
   when "51", "52", "53", "54", "55"
     puts "MASTERCARD"
-  when "40", "41", "42", "43", "44", "45", "46", "47", "48", "49"
+  when /4\d/ 
     puts "VISA"
   else
     puts "It's not any of the supported cards."
