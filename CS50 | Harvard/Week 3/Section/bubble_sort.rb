@@ -14,4 +14,4 @@ def bubble_sort(list)
   list
 end
 
-puts bubble_sort([2,100,200,4210,102441098,1,4,41,3,10,8,7]).inspect
+puts bubble_sort([2,100,200,4210,102441098,1,4,41,3,10,8,7])
