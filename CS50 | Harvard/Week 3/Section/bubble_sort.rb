@@ -1,14 +1,15 @@
 def bubble_sort(list)
   n = list.size
+  m = 1
   loop do
   swapped = false
-    (n-1).times do |index|
+    (n-m).times do |index|
       if list[index] > list[index + 1]
         list[index], list[index + 1] = list[index + 1], list[index]
         swapped = true
       end
     end
-
+    m += 1
     break if not swapped
   end
   list
