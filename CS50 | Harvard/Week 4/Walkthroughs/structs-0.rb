@@ -1,16 +1,16 @@
 STUDENTS = 2
 
+Student = Struct.new(:name, :house)
 students = []
 
 STUDENTS.times do |i|
-  hash = {}
+  students[i] = Student.new
   puts "Student's name:"
-  hash[:name] = gets
+  students[i].name = gets
 
   puts "Student's house:"
-  hash[:house] = gets
+  students[i].house = gets
 
-  students << hash
 end
 
 students.each do |student|
