@@ -14,5 +14,5 @@ STUDENTS.times do |i|
 end
 
 students.each do |student|
-  puts "Student named #{student[:name]} lives in #{student[:house]}"
+  puts "Student named #{student.name} lives in #{student.house}"
 end

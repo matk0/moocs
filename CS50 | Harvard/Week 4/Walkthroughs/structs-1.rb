@@ -2,23 +2,23 @@ require 'CSV'
 
 STUDENTS = 1
 
+Student = Struct.new(:name, :house)
 students = []
 
 STUDENTS.times do |i|
-  hash = {}
+  students[i] = Student.new
   puts "Student's name:"
-  hash[:name] = gets
+  students[i].name = gets
 
   puts "Student's house:"
-  hash[:house] = gets
+  students[i].house = gets
 
-  students << hash
 end
 
 file = CSV.open("students.csv", "w+") do |csv|
-  students.each { |student| csv << [student[:name], student[:house]] }
+  students.each { |student| csv << [student.name, student.house]}
 end
 
 students.each do |student|
-  puts "Student named #{student[:name]} lives in #{student[:house]}"
+  puts "Student named #{student.name} lives in #{student.house}"
 end
