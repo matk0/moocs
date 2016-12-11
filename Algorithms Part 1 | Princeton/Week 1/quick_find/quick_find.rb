@@ -5,7 +5,7 @@ class QuickFind
     @union_find = Array 0..(number_of_objects - 1)
   end
 
-  def connect p, q
+  def union p, q
     pid = union_find[p]
     qid = union_find[q]
     union_find.each_with_index do |item, index|
